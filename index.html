@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub-Like Code Saving Application</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+    <style>
+        .column {
+            padding: 20px;
+            border: 2px solid #00d1b2;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .title.is-centered {
+            text-align: center;
+            font-size: 2rem;
+        }
+
+        /* Adjust font sizes for smaller screens */
+        @media screen and (max-width: 768px) {
+            .title.is-size-3 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="section">
+        <div class="container">
+            <div class="block">
+                <a class="title is-centered is-size-3" href="https://t.me/ASHVANI09">Developer: Ashvani Kumar</a><br>
+                <p class="title is-centered is-size-5">The code snippets are saved in a JSON file on the server.</p>
+                <p class="title is-centered is-size-5">The application is built using PHP.</p>
+            </div>
+            <div class="columns">
+                <div class="column">
+                    <div id="pagination" class="has-text-centered">
+                        <div class="codeList">
+                            <h2 class="title is-4">Previous Codes</h2>
+                            <ul id="codes">
+                                <ul id="section1"></ul>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <form method="POST" action="https://source-code.azurewebsites.net/addCode.php">
+                        <div class="field is-grouped">
+                            <label class="label" for="subject">Subject:</label>
+                            <div class="control">
+                                <input class="input" type="text" id="subject" name="subject" required>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label class="label" for="message">Code:</label>
+                            <div class="control">
+                                <textarea class="textarea" id="message" name="message" rows="10" cols="40"
+                                    required></textarea>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label class="label" for="verification">KeyPhrase(Admins Only)</label>
+                            <div class="control">
+                                <input class="input" type="password" id="verification" name="verification" required>
+                            </div>
+                        </div>
+
+                        <div class="field is-grouped">
+                            <div class="control">
+                                <input type="submit" value="Submit" class="button is-primary">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p><strong>PROGRAMMING BY </strong><a href="https://t.me/ASHVANI09" target="_blank">Ashvani Kumar</a>.</p>
+        </div>
+    </footer>
+
+    <!-- Font Awesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.15.3/js/all.js"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>
