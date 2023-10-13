@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
                 data.forEach(code => {
                     const listItem = document.createElement("li");
-                    listItem.innerHTML = `<a href="code.php?id=${code.id}" target="_blank">${code.subject}</a>`;
+                    listItem.innerHTML = `<a href="https://source-code.azurewebsites.net/code.php?id=${code.id}" target="_blank">${code.subject}</a>`;
                     codeList.appendChild(listItem);
                 });
             })
