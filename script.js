@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function() {
         .then(response => {
             if (response.ok) {
                 fetchAndDisplayCodes();
-                form.reset();
+                location.reload();
             } else {
                 console.error("Failed to add code:", response.statusText);
             }
